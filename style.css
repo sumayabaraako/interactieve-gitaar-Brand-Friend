@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0d0d0d;
+
+  font-family: Arial, sans-serif;
+
+  overflow: hidden;
+}
+
+
+.gitaar {
+  position: relative;
+
+  width: 900px;
+  height: 300px;
+
+  background-color: #151515;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+
+
+.snaar {
+  position: absolute;
+
+  left: 50px;
+
+  width: 800px;
+  height: 3px;
+
+  background-color: #DCE1E7;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 2px rgba(212, 166, 76, 0.8);
+}
+
+
+/* snaar posities */
+.snaar1 {
+  top: 95px;
+}
+
+.snaar2 {
+  top: 115px;
+}
+
+.snaar3 {
+  top: 135px;
+}
+
+.snaar4 {
+  top: 155px;
+}
+
+.snaar5 {
+  top: 175px;
+}
+
+.snaar6 {
+  top: 195px;
+}
+
+
+/* werkende snaar */
+#snaar {
+  background-color: #DCE1E7;
+}
+
+
+/* snaar trilt */
+#snaar.trillen {
+  animation: snaarTrillen 0.25s linear;
+}
+
+
+@keyframes snaarTrillen {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  15% {
+    transform: translateY(-6px);
+  }
+
+  30% {
+    transform: translateY(6px);
+  }
+
+  45% {
+    transform: translateY(-4px);
+  }
+
+  60% {
+    transform: translateY(4px);
+  }
+
+  75% {
+    transform: translateY(-2px);
+  }
+
+  90% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* tekst */
+.tekst {
+  position: absolute;
+
+  right: 130px;
+  bottom: 160px;
+
+  margin: 0;
+
+  color: #DCE1E7;
+
+  font-size: 14px;
+}
+
+
+/* echt plectrum design */
+.plectrum {
+  position: absolute;
+
+  width: 90px;
+  height: auto;
+
+  right: 130px;
+  bottom: 60px;
+
+  cursor: grab;
+
+  user-select: none;
+  touch-action: none;
+
+  z-index: 100;
+
+ 
+  -webkit-user-drag: none;
+}
+
+
+.plectrum:active {
+  cursor: grabbing;
+}
